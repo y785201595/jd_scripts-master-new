@@ -15,9 +15,6 @@
 #半点京豆雨
 30 20-23/1 * * * node /scripts/jd_redrain_half.js >> /scripts/logs/jd_redrain_half.log 2>&1
 
-#双十二红包
-cron 0 0,20 * * * node /scripts/jd_1212.js >> /scripts/logs/jd_1212.log 2>&1
-
 #京东小魔方--收集兑换
 31 8 * * * node /scripts/jd_mofang_ex.js >> /scripts/logs/jd_mofang_ex.log 2>&1
 
@@ -128,7 +125,7 @@ cron 0 0,20 * * * node /scripts/jd_1212.js >> /scripts/logs/jd_1212.log 2>&1
 18 9,19 13-25 8 * node /scripts/jd_xl.js >> /scripts/logs/jd_xl.log 2>&1
 
 #特务Z
-20 7,8 * * * node /scripts/jd_superBrand.js >> /scripts/logs/jd_superBrand.log 2>&1
+13 15,19 * * * node /scripts/jd_superBrand.js >> /scripts/logs/jd_superBrand.log 2>&1
 
 #8.12-8.20 汽车生活节
 30 9,21 12-20 8 * node /scripts/jd_qcshj.js >> /scripts/logs/jd_qcshj.log 2>&1
