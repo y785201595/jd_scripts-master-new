@@ -6,7 +6,10 @@
 35 * * * * \cp /scripts/logs/111.log /scripts/logs/sharecodeCollection.log
 ##############短期活动##############
 
-#京车会签到
+#写情书抽京豆
+13 1,14 12-25 12 * node /scripts/jd_xqscjd.js >> /scripts/logs/jd_xqscjd.log 2>&1
+
+京车会签到
 19 8 * * * node /scripts/jd_jchsign.js >> /scripts/logs/jd_jchsign.log 2>&1
 
 #京喜签到-喜豆
