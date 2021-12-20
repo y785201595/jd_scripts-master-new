@@ -6,6 +6,9 @@
 35 * * * * \cp /scripts/logs/111.log /scripts/logs/sharecodeCollection.log
 ##############短期活动##############
 
+#京东特价--翻翻乐
+27 0,6-23 * * * node /scripts/jd_jdtj_winner.js >> /scripts/logsjd_jdtj_winner.log 2>&1
+
 #写情书抽京豆
 13 1,14 12-25 12 * node /scripts/jd_xqscjd.js >> /scripts/logs/jd_xqscjd.log 2>&1
 
