@@ -6,6 +6,9 @@
 35 * * * * \cp /scripts/logs/111.log /scripts/logs/sharecodeCollection.log
 ##############短期活动##############
 
+#大势新品赏
+1 0,22 * * * node /scripts/jd_desire.js >> /scripts/logs/jd_desire.log 2>&1
+
 #战队投注
 19 8 * * * node /scripts/jjd_zd.js >> /scripts/logs/jd_zd.log 2>&1
 
@@ -34,7 +37,7 @@
 30 20-23/1 * * * node /scripts/jd_redrain_half.js >> /scripts/logs/jd_redrain_half.log 2>&1
 
 #京东小魔方--收集兑换
-31 8 * * * node /scripts/jd_mofang_ex.js >> /scripts/logs/jd_mofang_ex.log 2>&1
+31 2,8 * * * node /scripts/jd_mofang_j.js >> /scripts/logs/jd_mofang_j.log 2>&1
 
 #京东我的理想家
 10 7 * * * node /scripts/jd_lxLottery.js >> /scripts/logs/jd_lxLottery.log 2>&1
