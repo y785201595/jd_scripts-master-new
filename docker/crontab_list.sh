@@ -6,6 +6,13 @@
 35 * * * * \cp /scripts/logs/111.log /scripts/logs/sharecodeCollection.log
 ##############短期活动##############
 
+
+#开新红包
+10 0,12 * * * node /scripts/jd_hb_a.js >> /scripts/logs/jd_hb_a.log 2>&1
+
+#京东通天塔--签到
+31 8 * * * node /scripts/jd_m_sign.js >> /scripts/logs/jd_m_sign.log 2>&1
+
 #会场红包雨
 21 20,21 * * * node /scripts/jd_hc_rain.js >> /scripts/logs/jd_hc_rain.log 2>&1
 
