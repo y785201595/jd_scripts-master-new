@@ -7,8 +7,14 @@
 ##############短期活动##############
 
 
-#开新红包
-10 0,12 * * * node /scripts/jd_hb_a.js >> /scripts/logs/jd_hb_a.log 2>&1
+#年货签到
+27 11 13-23 9 * node /scripts/jd_UnknownTask5.js >> /scripts/logs/jd_UnknownTask5.log 2>&1
+
+#爆裂豆豆游戏
+21 20,21 * * * node /scripts/jd_wxgame.js >> /scripts/logs/jd_wxgame.log 2>&1
+
+#年货签到
+0 8 1,2 * * node /scripts/jd_nh_sign.js >> /scripts/logsjd_nh_sign.log 2>&1
 
 #京东通天塔--签到
 31 8 * * * node /scripts/jd_m_sign.js >> /scripts/logs/jd_m_sign.log 2>&1
