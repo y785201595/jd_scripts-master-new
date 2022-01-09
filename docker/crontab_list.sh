@@ -6,6 +6,12 @@
 35 * * * * \cp /scripts/logs/111.log /scripts/logs/sharecodeCollection.log
 ##############短期活动##############
 
+#炸年兽
+0 0-23/5 * * * node /scripts/jd_zhanianshou.js >> /scripts/logs/jd_zhanianshou.log 2>&1
+
+#把智能生活带给TA
+0 23 * * * node /scripts/jd_bzlshdgt.js >> /scripts/logs/jd_bzlshdgt.log 2>&1
+
 #京东小魔方--收集兑换
 31 8 * * * node /scripts/jd_mofang_ex.js >> /scripts/logs/jd_mofang_ex.log 2>&1
 
