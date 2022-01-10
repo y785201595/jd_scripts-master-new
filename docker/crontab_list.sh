@@ -6,6 +6,18 @@
 35 * * * * \cp /scripts/logs/111.log /scripts/logs/sharecodeCollection.log
 ##############短期活动##############
 
+#jd_nhs_red.js
+0 0,12,23 * * * node /scripts/jd_nhs_red.js >> /scripts/logs/jd_nhs_red.log 2>&1
+
+#jd_mpdzcar_help
+0 7 * * * node /scripts/jd_mpdzcar_help.js >> /scripts/logs/jd_mpdzcar_help.log 2>&1
+
+#jjd_mpdzcar_gamer
+0 5,9,13 * * * node /scripts/jd_mpdzcar_game.js >> /scripts/logs/jjd_mpdzcar_game.log 2>&1
+
+#jd_mpdzcar
+0 10 * * * node /scripts/jd_mpdzcar.js >> /scripts/logs/jd_mpdzcar.log 2>&1
+
 #炸年兽
 0 0-23/5 * * * node /scripts/jd_zhanianshou.js >> /scripts/logs/jd_zhanianshou.log 2>&1
 
