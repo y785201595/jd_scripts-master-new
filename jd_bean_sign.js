@@ -26,7 +26,7 @@ const jr_file = 'JRBODY.txt'
 const readline = require('readline')
 let cookiesArr = []
 let notification = ''
-const stopVar = process.env.JD_BEAN_STOP ? process.env.JD_BEAN_STOP : '1000-2000';
+const stopVar = process.env.JD_BEAN_STOP ? process.env.JD_BEAN_STOP : '2000-5000';
 console.log('Stop:',stopVar)
 
 async function processLineByLine(jrbodys) {
@@ -47,7 +47,11 @@ async function processLineByLine(jrbodys) {
 (async () => {
   const jdCookieNode = require('./jdCookie.js')
   Object.keys(jdCookieNode).forEach((item) => {
-    cookiesArr.push(jdCookieNode[item])
+    let ck = jdCookieNode[item].trim()
+    if(ck.substring(ck.length-1) !== ';'){
+        ck = ck + ';'
+    }
+    cookiesArr.push(ck)
   })
   let jrbodys = []
   if(process.env.JRBODY) {

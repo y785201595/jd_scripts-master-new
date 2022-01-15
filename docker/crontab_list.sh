@@ -6,6 +6,18 @@
 35 * * * * \cp /scripts/logs/111.log /scripts/logs/sharecodeCollection.log
 ##############短期活动##############
 
+#主页-秒杀-狂撒三亿京
+0 0 * * * node /scripts/jd_babel_sign.js >> /scripts/logs/jd_babel_sign.log 2>&1
+
+#白条抽奖
+0 10 * * * node /scripts/jd_bt_sign.js >> /scripts/logs/jd_bt_sign.log 2>&1
+
+#天天压岁钱
+0 10,13 * * * node /scripts/jx_ttysq.js >> /scripts/logs/jx_ttysq.log 2>&1
+
+#jd_nhs_rpb.js
+0 0,23 * * * node /scripts/jd_nhs_rpb.js >> /scripts/logs/jd_nhs_rpb.log 2>&1
+
 #jd_cjhz.js
 0 3,23 * * * node /scripts/jd_cjhz.js >> /scripts/logs/jd_cjhz.log 2>&1
 
@@ -185,7 +197,7 @@
 18 9,19 13-25 8 * node /scripts/jd_xl.js >> /scripts/logs/jd_xl.log 2>&1
 
 #特务Z
-13 15,19 * * * node /scripts/jd_superBrand.js >> /scripts/logs/jd_superBrand.log 2>&1
+13 15,19 * * * node /scripts/jd_productZ4Brand.js >> /scripts/logs/jd_productZ4Brand.log 2>&1
 
 #8.12-8.20 汽车生活节
 30 9,21 12-20 8 * node /scripts/jd_qcshj.js >> /scripts/logs/jd_qcshj.log 2>&1
