@@ -6,6 +6,12 @@
 35 * * * * \cp /scripts/logs/111.log /scripts/logs/sharecodeCollection.log
 ##############短期活动##############
 
+#京东超市年货日历
+0 10,13 * * * node /scripts/jd_year.js >> /scripts/logs/jd_year.log 2>&1
+
+#萌虎摇摇乐
+0 10,13,19 * * * node /scripts/jd_tiger.js >> /scripts/logs/jd_tiger.log 2>&1
+
 #主页-秒杀-狂撒三亿京
 0 0 * * * node /scripts/jd_babel_sign.js >> /scripts/logs/jd_babel_sign.log 2>&1
 
@@ -16,7 +22,7 @@
 0 10,13 * * * node /scripts/jx_ttysq.js >> /scripts/logs/jx_ttysq.log 2>&1
 
 #jd_nhs_rpb.js
-0 0,23 * * * node /scripts/jd_nhs_rpb.js >> /scripts/logs/jd_nhs_rpb.log 2>&1
+0 0,23 * * * node /scripts/jd_nhs_rpc.js >> /scripts/logs/jd_nhs_rpc.log 2>&1
 
 #jd_cjhz.js
 0 3,23 * * * node /scripts/jd_cjhz.js >> /scripts/logs/jd_cjhz.log 2>&1
