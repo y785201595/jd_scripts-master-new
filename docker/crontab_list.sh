@@ -6,11 +6,14 @@
 35 * * * * \cp /scripts/logs/111.log /scripts/logs/sharecodeCollection.log
 ##############短期活动##############
 
+#点鞭炮赢京豆
+0 10 * * * node /scripts/jd_festival.js >> /scripts/logs/jd_festival.log 2>&1
+
 #京东超市年货日历
 0 10,13 * * * node /scripts/jd_year.js >> /scripts/logs/jd_year.log 2>&1
 
 #萌虎摇摇乐
-0 10,13,19 * * * node /scripts/jd_tiger.js >> /scripts/logs/jd_tiger.log 2>&1
+0 10,13,19 * * * node /scripts/jd_mhyyl.js >> /scripts/logs/jd_mhyyl.log 2>&1
 
 #主页-秒杀-狂撒三亿京
 0 0 * * * node /scripts/jd_babel_sign.js >> /scripts/logs/jd_babel_sign.log 2>&1

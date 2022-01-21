@@ -331,7 +331,7 @@ function readShareCode() {
   console.log(`开始`)
   return new Promise(async resolve => {
     $.get({
-      url: `https://api.jdsharecode.xyz/api/sgmh/${randomCount}`,
+      url: `https://transfer.nz.lu/sgmh`,
       'timeout': 10000
     }, (err, resp, data) => {
       try {

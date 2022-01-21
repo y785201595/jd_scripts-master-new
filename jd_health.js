@@ -151,23 +151,6 @@ function getTaskDetail(taskId = '') {
               if (oc(() => data.data.result.taskVos)) {
                 console.log(`\n【京东账号${$.index}（${$.UserName}）的${$.name}好友互助码】${oc(() => data.data.result.taskVos[0].assistTaskDetailVo.taskToken)}\n`);
                 // console.log('好友助力码：' + oc(() => data.data.result.taskVos[0].assistTaskDetailVo.taskToken))
-                // ***************************
-                // 报告运行次数
-                if (ZLC) {
-                  if (oc(() => data.data.result.taskVos[0].assistTaskDetailVo.taskToken)) {
-                    $.code = data.data.result.taskVos[0].assistTaskDetailVo.taskToken
-                    for (let k = 0; k < 5; k++) {
-                      try {
-                        await runTimes()
-                        break
-                      } catch (e) {
-                      }
-                      await $.wait(Math.floor(Math.random() * 10 + 3) * 1000)
-                    }
-                  }
-                }
-                // ***************************
-
               }
             } else if (taskId === 22) {
               console.log(`${oc(() => data.data.result.taskVos[0].taskName)}任务，完成次数：${oc(() => data.data.result.taskVos[0].times)}/${oc(() => data.data.result.taskVos[0].maxTimes)}`)
@@ -214,21 +197,6 @@ function getTaskDetail(taskId = '') {
           resolve()
         }
       })
-  })
-}
-function runTimes() {
-  return new Promise((resolve, reject) => {
-    $.get({
-      url: `https://api.jdsharecode.xyz/api/runTimes?activityId=health&sharecode=${$.code}`
-    }, (err, resp, data) => {
-      if (err) {
-        console.log('上报失败', err)
-        reject(err)
-      } else {
-        console.log(data)
-        resolve()
-      }
-    })
   })
 }
 async function getCommodities() {
@@ -370,7 +338,7 @@ function readShareCode() {
   console.log(`开始`)
   return new Promise(async resolve => {
     $.get({
-      url: `https://api.jdsharecode.xyz/api/health/${randomCount}`,
+      url: `https://transfer.nz.lu/health`,
       'timeout': 10000
     }, (err, resp, data) => {
       try {
