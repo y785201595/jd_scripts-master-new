@@ -6,8 +6,14 @@
 35 * * * * \cp /scripts/logs/111.log /scripts/logs/sharecodeCollection.log
 ##############短期活动##############
 
+#京喜领88元红包
+0 3,21 * * * node /scripts/jd_jxlhb.js >> /scripts/logs/jd_jxlhb.log 2>&1
+
+#京东小魔方
+0 3,13 * * * node /scripts/jd_xmf.js >> /scripts/logs/jd_xmf.log 2>&1
+
 #点鞭炮赢京豆
-0 10 * * * node /scripts/jd_festival.js >> /scripts/logs/jd_festival.log 2>&1
+0 10 * * * node /scripts/jd_sjnhj.js >> /scripts/logs/jd_sjnhj.log 2>&1
 
 #京东超市年货日历
 0 10,13 * * * node /scripts/jd_year.js >> /scripts/logs/jd_year.log 2>&1
