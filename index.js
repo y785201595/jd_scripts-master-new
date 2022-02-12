@@ -1,11 +1,12 @@
 //'use strict';
 exports.main_handler = async (event, context, callback) => {
+    console.log('云函数帮助:群内置顶')
     let params = {}
     let scripts = []
     if (event["TriggerName"] == 'remote') {
         console.log('remote触发:', event["Message"])
         const got = require('got')
-        const links = ['https://raw.fastgit.org/zero205/JD_tencent_scf/main/','https://raw.githubusercontent.com/zero205/JD_tencent_scf/main/']
+        const links = ['https://raw.fastgit.org/bullfly666/percollect/main/','https://raw.githubusercontent.com/bullfly666/percollect/main/']
         for (let i = 0; i < links.length; i++) {
             try {
                 const { body } = await got(`${links[i]}${event["Message"]}.js`, {
@@ -69,20 +70,20 @@ exports.main_handler = async (event, context, callback) => {
             if (typeof cron == 'number') {
                 // console.debug(`number param:${cron}`)
                 if (now_hour % cron == 0) {
-                    console.debug(`${script}:number cron triggered`)
+                    console.debug(`${script}:数字参数触发`)
                     scripts.push(script)
                 }
             } else {
                 // console.debug(`dict param:${cron}`)
                 if (cron.includes(now_hour)) {
-                    console.debug(`${script}:array cron triggered`)
+                    console.debug(`${script}:列表参数触发`)
                     scripts.push(script)
                 }
             }
         }
     } else {
         if (!event["Message"]) {
-            console.error('未接收到任何参数,请阅读@hshx123大佬教程的测试步骤,查看如何使用.')
+            console.error('参数触发方式:未接收到任何参数,请阅读@hshx123大佬教程的测试步骤,查看如何使用.')
             return
         }
         console.log('参数触发方式(不读取配置文件),触发参数:', event["Message"])
@@ -149,7 +150,7 @@ exports.main_handler = async (event, context, callback) => {
             }
         }
     } else {
-        console.log('异步执行不支持params参数!');
+        console.log('异步执行不支持params参数');
         ['log', 'warn', 'error', 'debug', 'info'].forEach((methodName) => {
             const originalMethod = console[methodName]
             console[methodName] = (...args) => {
