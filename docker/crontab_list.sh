@@ -6,26 +6,8 @@
 35 * * * * \cp /scripts/logs/111.log /scripts/logs/sharecodeCollection.log
 ##############短期活动##############
 
-#京喜领88元红包
-0 3,21 * * * node /scripts/jd_jxlhb.js >> /scripts/logs/jd_jxlhb.log 2>&1
-
 #京东小魔方
 0 3,13 * * * node /scripts/jd_xmf.js >> /scripts/logs/jd_xmf.log 2>&1
-
-#点鞭炮赢京豆
-0 10 * * * node /scripts/jd_sjnhj.js >> /scripts/logs/jd_sjnhj.log 2>&1
-
-#京东超市年货日历
-0 10,13 * * * node /scripts/jd_year.js >> /scripts/logs/jd_year.log 2>&1
-
-#萌虎摇摇乐
-0 10,13,19 * * * node /scripts/jd_mhyyl.js >> /scripts/logs/jd_mhyyl.log 2>&1
-
-#主页-秒杀-狂撒三亿京
-0 0 * * * node /scripts/jd_babel_sign.js >> /scripts/logs/jd_babel_sign.log 2>&1
-
-#白条抽奖
-0 10 * * * node /scripts/jd_bt_sign.js >> /scripts/logs/jd_bt_sign.log 2>&1
 
 #天天压岁钱
 0 10,13 * * * node /scripts/jx_ttysq.js >> /scripts/logs/jx_ttysq.log 2>&1
@@ -47,9 +29,6 @@
 
 #jd_mpdzcar
 0 10 * * * node /scripts/jd_mpdzcar.js >> /scripts/logs/jd_mpdzcar.log 2>&1
-
-#炸年兽
-0 0-23/5 * * * node /scripts/jd_travel.js >> /scripts/logs/jd_travel.log 2>&1
 
 #把智能生活带给TA
 0 23 * * * node /scripts/jd_bzlshdgt.js >> /scripts/logs/jd_bzlshdgt.log 2>&1
