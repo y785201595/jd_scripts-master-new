@@ -1,12 +1,12 @@
 //'use strict';
 exports.main_handler = async (event, context, callback) => {
-    console.log('云函数帮助:群内置顶')
+    console.log('云函数帮助:自己私库下readme文件,或者访问:https://github.com/zero205/JD_tencent_scf/tree/scf2')
     let params = {}
     let scripts = []
     if (event["TriggerName"] == 'remote') {
         console.log('remote触发:', event["Message"])
         const got = require('got')
-        const links = ['https://raw.fastgit.org/bullfly666/percollect/main/','https://raw.githubusercontent.com/bullfly666/percollect/main/']
+        const links = ['https://raw.fastgit.org/zero205/JD_tencent_scf/main/','https://raw.githubusercontent.com/zero205/JD_tencent_scf/main/']
         for (let i = 0; i < links.length; i++) {
             try {
                 const { body } = await got(`${links[i]}${event["Message"]}.js`, {
