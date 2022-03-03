@@ -10,7 +10,7 @@
 0 3,13 * * * node /scripts/jd_xmf.js >> /scripts/logs/jd_xmf.log 2>&1
 
 #天天压岁钱
-0 10,13 * * * node /scripts/jx_ttysq.js >> /scripts/logs/jx_ttysq.log 2>&1
+0 10,13 * * * node /scripts/jd_xiaolongfan.js >> /scripts/logs/jd_xiaolongfan.js.log 2>&1
 
 #jd_nhs_rpb.js
 0 0,23 * * * node /scripts/jd_nhs_rpc.js >> /scripts/logs/jd_nhs_rpc.log 2>&1
