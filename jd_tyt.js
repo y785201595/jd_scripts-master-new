@@ -42,7 +42,7 @@ const JD_API_HOST = 'https://api.m.jd.com/client.action';
     $.msg($.name, '【提示】请先获取京东账号一cookie\n直接使用NobyDa的京东签到获取', 'https://bean.m.jd.com/bean/signIndex.action', { "open-url": "https://bean.m.jd.com/bean/signIndex.action" });
     return;
   }
-  console.log(`\n******北京时间15点后会助力【zero205】，介意请勿运行******\n`);
+  console.log(`\n******北京时间12点后会助力【zero205】，介意请勿运行******\n`);
   for (let i = 0; i < cookiesArr.length; i++) {
     if (cookiesArr[i]) {
       cookie = cookiesArr[i];
@@ -78,7 +78,7 @@ const JD_API_HOST = 'https://api.m.jd.com/client.action';
     }
   }
   // nowTimes = new Date(new Date().getTime() + new Date().getTimezoneOffset() * 60 * 1000 + 8 * 60 * 60 * 1000)
-  if (new Date().getHours() >= 15) {
+  if (new Date().getHours() >= 12) {
     await getAuthorShareCode()
     if ($.authorCode && $.authorCode.length) {
       for (let i = 0; i < cookiesArr.length; i++) {
@@ -256,6 +256,7 @@ function getCoinDozerInfo() {
           data = JSON.parse(data);
           if (data.code == 0 && data.data.sponsorActivityInfo.packetId) {
             console.log(`【京东账号${$.index}的推一推邀请码】${data.data.sponsorActivityInfo.packetId}\n`)
+            console.log(`已推【${data.data.sponsorActivityInfo.dismantledAmount}】元\n`)
             packetId = data.data.sponsorActivityInfo.packetId
           } else {
             console.log(`【京东账号${$.index}】获取助力码失败\n`)
