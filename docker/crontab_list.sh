@@ -36,8 +36,8 @@
 #京东小魔方--收集兑换
 31 8 * * * node /scripts/jd_mofang_ex.js >> /scripts/logs/jd_mofang_ex.log 2>&1
 
-#年货签到
-27 11 13-23 9 * node /scripts/jd_UnknownTask5.js >> /scripts/logs/jd_UnknownTask5.log 2>&1
+#微信京小哥签到
+3 0,7 * * * node /scripts/jd_xgyl_wx.js >> /scripts/logs/jd_xgyl_wx.log 2>&1
 
 #爆裂豆豆游戏
 21 20,21 * * * node /scripts/jd_wxgame.js >> /scripts/logs/jd_wxgame.log 2>&1
@@ -423,13 +423,13 @@
 # 京喜农场
 30 9,12,18 * * * node /scripts/jd_jxqd.js >> /scripts/logs/jd_jxqd.log 2>&1
 # 签到领现金
-10 */4 * * * node /scripts/jd_cash.js >> /scripts/logs/jd_cash.log 2>&1
+10 13-19 * * * node /scripts/jd_cash.js >> /scripts/logs/jd_cash.log 2>&1
 # 京喜app签到
 29 7,17 * * * node /scripts/jx_sign.js >> /scripts/logs/jx_sign.log 2>&1
 # 闪购盲盒
 47 8 * * * node /scripts/jd_sgmh.js >> /scripts/logs/jd_sgmh.log 2>&1
 # 京东秒秒币
-10 6 * * * node /scripts/jd_ms.js >> /scripts/logs/jd_ms.log 2>&1
+10 6-20 * * * node /scripts/jd_ms.js >> /scripts/logs/jd_ms.log 2>&1
 #美丽研究院
 41 7,12,19 * * * node /scripts/jd_beauty.js >> /scripts/logs/jd_beauty.log 2>&1
 #京东保价
