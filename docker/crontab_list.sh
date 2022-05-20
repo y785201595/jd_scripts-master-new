@@ -267,7 +267,7 @@
 #0 9 * * * node /scripts/jd_joy_park_open.js >> /scripts/logs/jd_joy_park_open.log 2>&1
 
 #汪汪乐园每日任务
-0 9 * * * node /scripts/jd_joy_park_task.js >> /scripts/logs/jd_joy_park_task.log 2>&1
+0 9,15,21 * * * node /scripts/jd_joy_park_task.js >> /scripts/logs/jd_joy_park_task.log 2>&1
 
 #全面抢京豆
 08 12-13 * * * node /scripts/jd_qjd.js >> /scripts/logs/jd_qjd.log 2>&1
