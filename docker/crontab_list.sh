@@ -15,8 +15,7 @@
 #jd_nhs_rpb.js
 0 0,23 * * * node /scripts/jd_nhs_rpc.js >> /scripts/logs/jd_nhs_rpc.log 2>&1
 
-#jd_cjhz.js
-10 0,6-23/2 * * * node /scripts/jd_19E.js >> /scripts/logs/jd_19E.log 2>&1
+
 
 #探味奇遇记
 31 1 * * * node /scripts/jd_tanwei.js >> /scripts/logs/jd_tanwei.log 2>&1
