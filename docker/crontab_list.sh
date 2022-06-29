@@ -15,11 +15,6 @@
 #jd_nhs_rpb.js
 0 0,23 * * * node /scripts/jd_nhs_rpc.js >> /scripts/logs/jd_nhs_rpc.log 2>&1
 
-
-
-#探味奇遇记
-31 1 * * * node /scripts/jd_tanwei.js >> /scripts/logs/jd_tanwei.log 2>&1
-
 #jd_mpdzcar_help
 0 7 * * * node /scripts/jd_mpdzcar_help.js >> /scripts/logs/jd_mpdzcar_help.log 2>&1
 
@@ -40,9 +35,6 @@
 
 #爆裂豆豆游戏
 21 20,21 * * * node /scripts/jd_wxgame.js >> /scripts/logs/jd_wxgame.log 2>&1
-
-#年货签到
-0 8 1,2 * * node /scripts/jd_nh_sign.js >> /scripts/logsjd_nh_sign.log 2>&1
 
 #京东通天塔--签到
 31 8 * * * node /scripts/jd_m_sign.js >> /scripts/logs/jd_m_sign.log 2>&1
