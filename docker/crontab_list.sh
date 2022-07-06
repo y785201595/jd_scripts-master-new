@@ -206,7 +206,7 @@
 30 16-23/1 * * * node /scripts/jd_half_redrain.js >> /scripts/logs/jd_half_redrain.log 2>&1
 
 #图形签到
-26 1,9 * * * node /scripts/jd_sign_graphics.js >> /scripts/logs/jd_sign_graphics.log 2>&1
+#26 1,9 * * * node /scripts/jd_sign_graphics111.js >> /scripts/logs/jd_sign_graphics.log 2>&1
 
 #首页-领京豆-升级赚京豆
 5 0-23/6 * * * node /scripts/jd_wsdlb.js >> /scripts/logs/jd_wsdlb.log 2>&1
