@@ -264,29 +264,12 @@
 #柠檬京东零食街
 0 11 * * * node /scripts/jd_lsj.js >> /scripts/logs/jd_lsj.log 2>&1
 
-#欧洲狂欢杯
-#57 59 9  * * * node /scripts/jd_europeancup.js >> /scripts/logs/jd_europeancup.log 2>&1
-
 # 一分钱抽奖
 10 0 * * * node /scripts/jd_lottery_drew.js >> /scripts/logs/jd_lottery_drew.log 2>&1
 
 #推一推
 30 7 * * * node /scripts/jd_tuijinbi.js >> /scripts/logs/jd_tuijinbi.log 2>&1
 
-#特物Z
-#18 11,21 * * * node /scripts/jd_tewuZ.js >> /scripts/logs/jd_tewuZ.log 2>&1
-
-#东东乐园
-#30 7 * * * node /scripts/jd_ddly.js >> /scripts/logs/jd_ddly.log 2>&1
-
-#京东到家果园水车收水滴任务
-#*/20 * * * * node /scripts/jd_jddj_fruit_collectWater.js >> /scripts/logs/jd_jddj_fruit_collectWater.log 2>&1
-
-#京东到家鲜豆庄园收水滴
-#3*/20 * * * * node /scripts/jd_jddj_getPoints.js >> /scripts/logs/jd_jddj_getPoints.log 2>&1
-
-#京京东到家鲜豆庄园
-#10 0 * * * node /scripts/jd_jddj_plantBeans.js >> /scripts/logs/jd_jddj_plantBeans.log 2>&1
 
 #京东魔盒
 0 0,1-23/3 * * * node /scripts/jd_mohe.js >> /scripts/logs/jd_mohe.log 2>&1
@@ -312,32 +295,6 @@
 #明星小店(星店长)
 0 1,21 * * * node /scripts/ jd_star_shop.js >> /scripts/logs/ jd_star_shop.js 2>&1
 
-#京东极速版红包(活动时间：2021-5-5至2021-5-31)
-45 0,23 * * * node /scripts/jd_speed_redpocke.js >> /scripts/logs/jd_speed_redpocke.log 2>&1
-
-#超级直播间红包雨(活动时间不定期，出现异常提示请忽略。红包雨期间会正常)
-1,31 0-23/1 * * * node /scripts/jd_live_redrain.js >> /scripts/logs/jd_live_redrain.log 2>&1
-
-#每日抽奖(活动时间：2021-05-01至2021-05-31)
-#13 1,22,23 * * * node /scripts/jd_daily_lottery.js >> /scripts/logs/jd_daily_lottery.log 2>&1
-#城城领现金
-#33 * * * * node /scripts/jd_city.js >> /scripts/logs/jd_city.log 2>&1
-
-#手机狂欢城
-0 0,12,18,21 * * * node /scripts/jd_carnivalcity.js >> /scripts/logs/jd_carnivalcity.log 2>&1
-#618动物联萌
-#33 * * * * node /scripts/jd_zoo.js >> /scripts/logs/jd_zoo.log 2>&1
-
-#家电星推官 活动时间：2021年5月27日 00:00:00-2021年6月18日 23:59:59
-0 0 * * * node /scripts/jd_xtg.js >> /scripts/logs/jd_xtg.log 2>&1
-#家电星推官 活动时间：2021年5月27日 00:00:00-2021年6月18日 23:59:59
-#0 0 * * * node /scripts/jd_xtg_help.js >> /scripts/logs/jd_xtg_help.log 2>&1
-#金榜创造营 活动时间：2021-05-21至2021-12-31
-#0 1,22 * * * node /scripts/jd_gold_creator.js >> /scripts/logs/jd_gold_creator.log 2>&1
-#京享值PK
-#15 0,6,13,19,21 * * * node /scripts/jd_pk.js >> /scripts/logs/jd_pk.log 2>&1
-#京东沸腾之夜(5.31日有效)
-#0 15-19/1 * * * node /scripts/jd_party_night.js >> /scripts/logs/jd_party_night.log 2>&1
 ##############长期活动##############
 #送豆得豆
 15 2,14,22 * * * node /scripts/jd_sddd.js >> /scripts/logs/jd_sddd.log 2>&1
@@ -424,7 +381,7 @@
 #京东保价
 #41 0,23 * * * node /scripts/jd_price.js >> /scripts/logs/jd_price.log 2>&1
 #京东极速版签到+赚现金任务
-21 1,6,18 * * * node /scripts/jd_speed_sign.js >> /scripts/logs/jd_speed_sign.log 2>&1
+21 6,18 * * * node /scripts/jd_speed_sign.js >> /scripts/logs/jd_speed_sign.log 2>&1
 #监控crazyJoy分红
 #10 12 * * * node /scripts/jd_crazy_joy_bonus.js >> /scripts/logs/jd_crazy_joy_bonus.log 2>&1
 #京喜财富岛
